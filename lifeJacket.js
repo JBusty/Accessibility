@@ -10,8 +10,8 @@ function lifeJacket() {
 	var iframeNoTitle = $('iframe').attr('title', '');
 	
 	//Run only if issue exists on page
-	if ( iframeNoTitle.size() > 0 ) {
-		$(iframeNoTitle).attr('title', '').each( function() {
+	if ( iframeNoTitle.length > 0 ) {
+		iframeNoTitle.attr('title', '').each( function() {
 			var iframeSrc = $(this).attr('src');
 			//Set title as src attribute value
 			$(this).attr('title', iframeSrc);
@@ -24,8 +24,8 @@ function lifeJacket() {
 	var linkNoTitle = $('a').attr('title', '');	
 
 	//Run only if issue exists on page
-	if ( linkNoTitle.size() > 0 ) {	
-		$(linkNoTitle).attr('title', '').each(function() {
+	if ( linkNoTitle.length > 0 ) {	
+		linkNoTitle.attr('title', '').each(function() {
 			var linkText = $(this).attr('href');
 			//Adds a unique title to links without one
 			$(this).attr("title", linkText );
@@ -35,11 +35,11 @@ function lifeJacket() {
 	//Images with no alt attribute
 	
 	//Select all images with no alt attribute
-	var ImgNoAlt = $('img').attr('alt', '');	
+	var imgNoAlt = $('img').attr('alt', '');	
 
 	//Run only if issue exists on page
-	if ( ImgNoAlt.size() > 0 ) {	
-		$(ImgNoAlt).attr('title', '').each(function() {
+	if ( imgNoAlt.length > 0 ) {	
+		imgNoAlt.each(function() {
 			var imgAlt = $(this).attr('src');
 			//Adds a unique title to links without one
 			$(this).attr("title", imgAlt );
