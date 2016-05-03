@@ -42,7 +42,7 @@ function lifeJacket() {
 		imgNoAlt.each(function() {
 			var imgAlt = $(this).attr('src');
 			//Adds a unique title to links without one
-			$(this).attr("title", imgAlt );
+			$(this).attr("alt", imgAlt );
 		});
 	}
 }
